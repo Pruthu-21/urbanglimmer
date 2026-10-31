@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import {
@@ -27,7 +27,7 @@ const MILESTONES: { status: OrderStatus; label: string; desc: string }[] = [
   { status: 'Delivered', label: 'Delivered', desc: 'Signed receipt at customer doorstep' },
 ];
 
-export default function TrackOrderPage() {
+function TrackOrderContent() {
   const searchParams = useSearchParams();
   const initialId = searchParams.get('id') || '';
 
@@ -254,5 +254,19 @@ export default function TrackOrderPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function TrackOrderPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#F8F4EE] flex items-center justify-center font-sans">
+          <div className="w-8 h-8 border-2 border-[#603A46] border-t-transparent rounded-full animate-spin" />
+        </div>
+      }
+    >
+      <TrackOrderContent />
+    </Suspense>
   );
 }

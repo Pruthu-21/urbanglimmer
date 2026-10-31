@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import {
@@ -22,7 +22,7 @@ import CartDrawer, { CartItem } from '@/components/storefront/CartDrawer';
 import SearchDrawer from '@/components/storefront/SearchDrawer';
 import Footer from '@/components/storefront/Footer';
 
-export default function ShopPage() {
+function ShopContent() {
   const searchParams = useSearchParams();
   const filterQuery = searchParams.get('filter');
   const catQuery = searchParams.get('category');
@@ -493,5 +493,19 @@ export default function ShopPage() {
       <SearchDrawer isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
       <Footer />
     </div>
+  );
+}
+
+export default function ShopPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#F8F4EE] flex items-center justify-center font-sans">
+          <div className="w-8 h-8 border-2 border-[#603A46] border-t-transparent rounded-full animate-spin" />
+        </div>
+      }
+    >
+      <ShopContent />
+    </Suspense>
   );
 }

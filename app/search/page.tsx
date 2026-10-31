@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Search, Heart, Star, ShoppingBag, ArrowRight } from 'lucide-react';
@@ -10,7 +10,7 @@ import Header from '@/components/storefront/Header';
 import CartDrawer, { CartItem } from '@/components/storefront/CartDrawer';
 import Footer from '@/components/storefront/Footer';
 
-export default function SearchPage() {
+function SearchContent() {
   const searchParams = useSearchParams();
   const initialQuery = searchParams.get('q') || '';
 
@@ -225,5 +225,19 @@ export default function SearchPage() {
 
       <Footer />
     </div>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#F8F4EE] flex items-center justify-center font-sans">
+          <div className="w-8 h-8 border-2 border-[#603A46] border-t-transparent rounded-full animate-spin" />
+        </div>
+      }
+    >
+      <SearchContent />
+    </Suspense>
   );
 }
