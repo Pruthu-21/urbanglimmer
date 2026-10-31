@@ -9,7 +9,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: 'Urban Glimmer — Little details. Lasting impressions.',
-  description: 'Considered gold-tone jewellery and everyday accessories. Thoughtfully chosen, endlessly worn.',
+  description: 'Considered gold-tone jewellery and everyyear accessories. Thoughtfully chosen, endlessly worn.',
   keywords: ['jewellery', 'gold earrings', 'layered necklaces', 'pendants', 'signet rings', 'cuffs', 'urban glimmer'],
   openGraph: {
     title: 'Urban Glimmer — Little details. Lasting impressions.',
