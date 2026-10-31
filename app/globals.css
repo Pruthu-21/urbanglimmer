@@ -2,21 +2,25 @@
 @import "tailwindcss";
 
 :root {
-  /* Brand System Colors */
+  /* Brand System Colors — Phase 2 Official Palette */
   --burgundy: #603A46;
   --festive-wine: #852F3A;
   --champagne-gold: #C6A064;
   --champagne-light: #F4E9C9;
-  --warm-ivory: #F7F0E6;
-  --blush-beige: #E6D4C5;
-  --deep-espresso: #302326;
+  --warm-ivory: #F8F4EE;
+  --dark-bg: #151313;
+  --dark-surface: #211C1D;
+  --primary-text: #211B1C;
+  --secondary-text: #766D6D;
+  --border-color: #E8DFD5;
+  --white: #FFFFFF;
 
   /* Functional mappings */
-  --ink: #302326;
-  --paper: #F7F0E6;
-  --cream: #E6D4C5;
-  --line: #E2D3C8;
-  --muted: #7E6B72;
+  --ink: #211B1C;
+  --paper: #F8F4EE;
+  --cream: #EFE8DE;
+  --line: #E8DFD5;
+  --muted: #766D6D;
   --accent: #C6A064;
   --primary: #603A46;
 
