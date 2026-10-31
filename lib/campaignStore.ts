@@ -52,7 +52,7 @@ const DEFAULT_ANNOUNCEMENT: AnnouncementConfig = {
 
 const DEFAULT_HERO: HeroCampaignConfig = {
   eyebrow: 'ROYAL HEIRLOOM COLLECTION · AUTUMN 2026',
-  title: 'Jewellery That Becomes Your Story',
+  title: 'Jewellery That Becomes Your Life',
   subtitle: 'Discover timeless elegance, handcrafted in 18k gold vermeil and natural pearls for your most meaningful moments.',
   primaryCtaText: 'Explore The Collection',
   primaryCtaLink: '/shop',

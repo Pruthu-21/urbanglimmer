@@ -218,7 +218,7 @@ export default function HomePage() {
 
                 <h1 className="font-serif text-4xl sm:text-6xl lg:text-7xl font-medium tracking-tight text-[#F8F4EE] leading-[1.08]">
                   Jewellery That <br />
-                  <span className="italic text-[#C6A064] font-normal">Becomes Your Story</span>
+                  <span className="italic text-[#C6A064] font-normal">Becomes Your Life</span>
                 </h1>
 
                 <p className="text-sm sm:text-base text-[#E8DFD5]/80 max-w-xl mx-auto lg:mx-0 font-light leading-relaxed">
